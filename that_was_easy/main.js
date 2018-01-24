@@ -1,4 +1,8 @@
 
+$("#easy").on("click", sayThatWasEasy);
+$document.keypress(delegateKeypress);
+
+
 
 function sayThatWasEasy(){
     
@@ -6,4 +10,11 @@ function sayThatWasEasy(){
     thatWasEasy.play();
 }
 
-("#easy").on("click", sayThatWasEasy);
+
+
+function delegateKeypress(event){
+    
+if (event.charCode == 32){
+$("#easy").trigger("click");
+}
+}
