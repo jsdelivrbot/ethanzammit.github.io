@@ -1,20 +1,30 @@
+/*global $*/
+
 
 $("#easy").on("click", sayThatWasEasy);
-$document.keypress(delegateKeypress);
+$("#drop").on("click", dropz);
+$("#stop").on("click", stopDropp);
 
 
+var thatWasEasy = new Audio("that_was_easy.mp3");
+var dropp = new Audio("drop.mp3");
+
+
+
+function dropz(){
+    dropp.load();
+    dropp.play();
+    
+}
 
 function sayThatWasEasy(){
     
-    var thatWasEasy = new Audio("that_was_easy.mp3");
+    thatWasEasy.load();
     thatWasEasy.play();
 }
 
-
-
-function delegateKeypress(event){
-    
-if (event.charCode == 32){
-$("#easy").trigger("click");
+function stopDropp(){
+    thatWasEasy.pause();
+    dropp.pause();
 }
-}
+

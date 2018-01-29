@@ -7,3 +7,21 @@
      color: white;
     
 }
+
+#drop{
+     width: 200px;
+     height: 200px;
+     border-radius: 100px;
+     background-color: green;
+     font-size: 50px;
+     color: pink;
+}     
+
+
+#stop{
+     width: 100px;
+     height: 100px;
+     border-radius: 150px;
+     background-color: red;
+     font-size: 20px;
+}
