@@ -42,5 +42,6 @@ function draw() {
     x = x + circleDiameter;
     }
     y = y+ circleRadius;
+    isShifted = !isShifted;
   }
 }
