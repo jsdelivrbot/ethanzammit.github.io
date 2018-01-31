@@ -21,7 +21,7 @@ function sayThatWasEasy(){
     
     thatWasEasy.load();
     thatWasEasy.play();
-}
+}geometric_pattern
 
 function stopDropp(){
     thatWasEasy.pause();
