@@ -49,7 +49,7 @@ function draw() {
   
   
   while (x <= width) {
-    fill(color(rVal, gVal, bVal));
+    fill(color(rVal, gVal, bVal, 0.8));
     stroke(color(rVal, gVal, bVal));
     ellipse(x, y, circleDiameter, circleDiameter);
     x = x + circleDiameter;
