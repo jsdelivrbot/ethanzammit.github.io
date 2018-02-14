@@ -7,6 +7,9 @@
 /*global height*/
 /*global keyDown*/
 /*global drawSprites*/
+/*global loadImage*/
+/*global drawSprites*/
+/*global drawSprites*/
 
 var player;
 var enemy;
@@ -15,6 +18,8 @@ var isGameOver;
 var playerImage;
 var enemyImage;
 var backgorundImage;
+
+var enemySpeed;
 
 function preload(){
     playerImage = loadImage("https://surrogate.hackedu.us/i.imgur.com/N5uCbDu.png");
@@ -30,7 +35,8 @@ function setup() {
     player.addImage(playerImage);
     enemy = createSprite(width/2, 0, 10, 30);
     enemy.addImage(enemyImage);
-    enemy.rotationSpeed = 4.0;
+    enemy.rotationSpeed = 6.0;
+    enemySpeed = 4;
     isGameOver = false;
     
 }
@@ -51,17 +57,18 @@ function draw() {
 
     
     if(keyDown(RIGHT_ARROW) && player.position.x < (width-(playerImage.height/2))) {
-    player.position.x = player.position.x + 1.5;
+    player.position.x = player.position.x + 6;
     }
     
     if(keyDown(LEFT_ARROW) && player.position.x > (playerImage.height/2)) {
-        player.position.x = player.position.x -1.5;
+        player.position.x = player.position.x -6;
     }
     
-    enemy.position.y = enemy.position.y + 3;
+    enemy.position.y = enemy.position.y + enemySpeed;
     if(enemy.position.y > height) {
         enemy.position.y = 0;
         enemy.position.x = random(5, width-5);
+        enemySpeed = enemySpeed+0.2;
     }
     
 
