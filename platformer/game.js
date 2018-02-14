@@ -1,4 +1,4 @@
-var GRAVITY = 03;
+var GRAVITY = 0.3;
 var JUMP = -5;
 var groundSprites;
 var GROUND_SPRITE_WIDTH = 50;
