@@ -1,4 +1,4 @@
-var GRAVITY = 0.3;
+var GRAVITY = 03;
 var JUMP = -5;
 var groundSprites;
 var GROUND_SPRITE_WIDTH = 50;
@@ -49,7 +49,7 @@ if(groundSprites.overlap(player)){
 
 
 if(keyDown(UP_ARROW)){
-    player.velocity.y = player.velocity.y+JUMP;
+    player.velocity.y = JUMP;
 }
 
 
